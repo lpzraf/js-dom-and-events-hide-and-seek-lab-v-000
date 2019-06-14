@@ -3,6 +3,19 @@ function getFirstSelector(selector) {
 }
 
 
-function nestedTarget(selector1, selector2) {
-  return document.getElementById(selector1).querySelector(selector2)
+function nestedTarget() {
+  return document.querySelector('#nested .target')
 }
+
+
+function increaseRankBy(n) {
+  const lis = document.getElementById('app').querySelectorAll('ul.ranked-list li');
+
+  for (let i = 0; i < lis.length; i++) {
+    lis[i].innerHTML = parseInt(lis[i].innerHTML) + n
+  }
+}
+
+ function deepestChild() {
+     return document.getElementById('grand-node').querySelectorAll('div')[3]
+ }
